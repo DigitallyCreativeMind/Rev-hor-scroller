@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+
+<style>
+  .reviews-card-container {
+   --spacer: 1em;
+   display: grid;
+   grid-auto-flow: column;
+   grid-auto-columns: 43%;
+   grid-gap: var(--spacer, 1em);
+   overflow-x: auto;
+   padding-bottom: var(--spacer, 1em);
+   scroll-snap-type: inline;
+   overscroll-behavior-inline: contain;
+   scroll-padding-inline: var(--spacer);
+  }
+  .review-card { 
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-gap: var(--spacer);
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: var(--spacer);
+    scroll-snap-align: start;
+    text-align: justify;
+    box-shadow: 5px 5px 5px -2px #908d8d;
+  }
+  .review-verification-status {
+    color: #FFA500;
+    font-weight: 800;
+  }
+  .review-rating-and-summary {
+    display: flex;
+  }  
+  .review-rating {
+    margin-right: 2em;
+    object-fit: contain
+  }
+  .review-summary {
+    font-weight: 900;
+    line-height: 0.1em;
+    margin-top: .5em;
+  }
+@media screen and (max-width: 600px) {
+  .reviews-card-container {
+   grid-auto-columns: 75%;
+  }
+  .review-rating-and-summary {
+    flex-wrap: wrap;
+    margin-bottom: 0.7em;
+    margin-top: 0.3em;
+  }
+}
+@media screen and (max-width: 950px) {
+  .review-rating-and-summary {
+    flex-wrap: wrap;
+    margin-bottom: 0.7em;
+    margin-top: 0.3em;
+  }
+}
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.reviews-card-container::-webkit-scrollbar {
+  width:15px;
+  height: 15px;
+} 
+.reviews-card-container::-webkit-scrollbar-thumb {
+    --h:120;
+    --s:50%;
+    --l:50%;
+    background: hsl(var(--h) var(--s) var(--l));
+    border-radius: 15px;
+}
+.reviews-card-container::-webkit-scrollbar-thumb:hover {
+    --l:40%;
+}
+.reviews-card-container::-webkit-scrollbar-track {
+    background: #c1baba;
+    border-radius: 15px;
+}
+@supports (scrollbar-color: red blue) {
+    * {
+        scrollbar-color: hsl(0 50% 50% / 1) hsl(240, 75%, 51%);
+        scrollbar-width: 15px;
+    }
+}
+</style>
+</head>
+<body>
+        <div class  = "content reviews-card-container">  
+        <div class = "review-card prevent-select">       
+        <div class = "review-header">
+        <div class = "review-rating-and-summary">
+        <div class = "review-rating"><img src = "star-rating.svg"></div>
+        <div class = "review-summary">  
+            I love it so much. Thanks!
+        </div>  
+        </div>
+        <div class = "review-country-and-date"> Reviewed in the US <img src = "usa-flag-icon.svg"  width = "20px" height = "12px"> on December 20, 2022
+            </div> 
+        <div class = "review-verification-status">Verified purchase</div>
+        </div>
+          
+        <div class = "review-content"> 
+            Such a fun activity with my step daughter! We made lip balms for her teachers as friends for end of school gifts. Pretty easy to use, just make sure you're following the instruction closely.Can't wait to buy again and try other KISS products. Super natural ingredients too which I love.
+        </div>       
+        </div>  
+        
+        <div class = "review-card prevent-select">       
+            <div class = "review-header">
+            <div class = "review-rating-and-summary">
+            <div class = "review-rating"><img src = "star-rating.svg"></div>
+            <div class = "review-summary">  
+                I love it so much. Thanks!
+            </div>  
+            </div>
+            <div class = "review-country-and-date"> Reviewed in Canada <img src = "canada-flag-icon.svg"  width = "20px" height = "12px"> on December 20, 2022
+                </div> 
+            <div class = "review-verification-status">Verified purchase</div>
+            </div>
+              
+            <div class = "review-content"> 
+                Such a fun activity with my step daughter! We made lip balms for her teachers as friends for end of school gifts. Pretty easy to use, just make sure you're following the instruction closely.Can't wait to buy again and try other KISS products. Super natural ingredients too which I love.
+            </div>       
+            </div>  
+
+            <div class = "review-card prevent-select">       
+                <div class = "review-header">
+                <div class = "review-rating-and-summary">
+                <div class = "review-rating"><img src = "star-rating.svg"></div>
+                <div class = "review-summary">  
+                    I love it so much. Thanks!
+                </div>  
+                </div>
+                <div class = "review-country-and-date"> Reviewed in the US <img src = "usa-flag-icon.svg"  width = "20px" height = "12px"> on December 20, 2022
+                    </div> 
+                <div class = "review-verification-status">Verified purchase</div>
+                </div>
+                  
+                <div class = "review-content"> 
+                    Such a fun activity with my step daughter! We made lip balms for her teachers as friends for end of school gifts. Pretty easy to use, just make sure you're following the instruction closely.Can't wait to buy again and try other KISS products. Super natural ingredients too which I love.
+                </div>       
+                </div>  
+
+                <div class = "review-card prevent-select">       
+                    <div class = "review-header">
+                    <div class = "review-rating-and-summary">
+                    <div class = "review-rating"><img src = "star-rating.svg"></div>
+                    <div class = "review-summary">  
+                        I love it so much. Thanks!
+                    </div>  
+                    </div>
+                    <div class = "review-country-and-date"> Reviewed in Canada <img src = "canada-flag-icon.svg"  width = "20px" height = "12px"> on December 20, 2022
+                        </div> 
+                    <div class = "review-verification-status">Verified purchase</div>
+                    </div>
+                      
+                    <div class = "review-content"> 
+                        Such a fun activity with my step daughter! We made lip balms for her teachers as friends for end of school gifts. Pretty easy to use, just make sure you're following the instruction closely.Can't wait to buy again and try other KISS products. Super natural ingredients too which I love.
+                    </div>       
+                    </div>  
+
+                    <div class = "review-card prevent-select">       
+                        <div class = "review-header">
+                        <div class = "review-rating-and-summary">
+                        <div class = "review-rating"><img src = "star-rating.svg"></div>
+                        <div class = "review-summary">  
+                            I love it so much. Thanks!
+                        </div>  
+                        </div>
+                        <div class = "review-country-and-date"> Reviewed in Canada <img src = "canada-flag-icon.svg"  width = "20px" height = "12px"> on December 20, 2022
+                            </div> 
+                        <div class = "review-verification-status">Verified purchase</div>
+                        </div>
+                          
+                        <div class = "review-content"> 
+                            Such a fun activity with my step daughter! We made lip balms for her teachers as friends for end of school gifts. Pretty easy to use, just make sure you're following the instruction closely.Can't wait to buy again and try other KISS products. Super natural ingredients too which I love.
+                        </div>       
+                        </div>  
+        </div>
+</body>
+</html>
